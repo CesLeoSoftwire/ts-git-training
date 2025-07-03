@@ -64,8 +64,8 @@ const recursiveFibonacciNeg = (initialPosition: number, left: number = 0, right:
     if (initialPosition === 0) return 0;
     if (currentPosition === 0) return left;
     if (initialPosition > 0) {
-        return recursiveFibonacci(initialPosition, right, left + right, currentPosition - 1);
+        return recursiveFibonacciNeg(initialPosition, right, left + right, currentPosition - 1);
     } else {
-        return recursiveFibonacci(initialPosition, right - left, left, currentPosition + 1);
+        return recursiveFibonacciNeg(initialPosition, right - left, left, currentPosition + 1);
     }
 }
